@@ -1,2 +1,2 @@
 # rust-shit
-think of book
+thing of book
