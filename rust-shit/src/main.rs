@@ -15,6 +15,10 @@ fn main() {
         .read_line(&mut guess) //akin to scannerName.nextLine(); - assighning input to mutable variable guess NOTE this appends to existing string contents
         .expect("Failed to read line");
 
+    let guess: u32 = guess.trim().parse().expect("Please type a number"); //u32 means 32 bit unsighned int, we are trimming and parsing a string for int values
+                                                                          //it forces you to have an axpect statemtn so it doesnt crash when you try to be a smartass and type chars into the prompt
+                                                                          //ooh also we are "shadowing" the old guess var with a new one, its basically overriting ands using the same name
+
     println!("You guessed: {guess}");
     //match expression decides what to do based on what variant of ordering was returned
     //match matches the thing on the left to the ARM (=>) it is getting ponted at on the left (fancy fancy very brittish if/elseif statment for krumpet munchers)
